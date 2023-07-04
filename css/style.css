@@ -1,0 +1,290 @@
+.navbar .navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar .menu li {
+    margin-left: 20px;
+}
+
+.landingPage #navbarMenu .menuItems li a {
+    color: #f5f5f5;
+    margin-left: 20px;
+}
+
+body.landingPage {
+    background-color: #373737;
+    margin-left: 50px;
+
+}
+
+body.landingPage h2 {
+    letter-spacing: 4px;
+    font-size: 26px;
+}
+
+.landingPage .bodyContent .banner img {
+    width: 100%;
+}
+
+.landingPage .bodyContent .serviceQuality .row.serviceQualityImg .image-item img {
+    width: 50%;
+}
+
+.landingPage .bodyContent .serviceQuality {
+    background: white;
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 15px;
+    box-shadow: 0px 0px 10px 5px black;
+}
+
+.landingPage .bodyContent .serviceQuality .row.serviceQualityImg {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+    justify-content: center;
+}
+
+.landingPage .bodyContent .serviceQuality .serviceQualityImg .image-item .image-name {
+    padding: 20px;
+    font-size: 12px;
+}
+
+.landingPage .bodyContent .serviceQuality h2 {
+    font-family: system-ui;
+    letter-spacing: 5px;
+}
+
+.landingPage .bodyContent .serviceQuality p {
+    font-family: none;
+    letter-spacing: 5px;
+}
+
+.landingPage .bodyContent .EditingServicesTitle p {
+    background: white;
+    padding: 10px 60px;
+    box-shadow: 0px 0px 10px 5px black;
+    border-radius: 130px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.landingPage .bodyContent .EditingServicesTitle {
+    margin: 35px 0px;
+    text-align: center;
+}
+
+.landingPage .bodyContent .ourClient {
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 5px black;
+    padding: 30px 0px;
+    margin-left: 15px;
+}
+
+.landingPage .bodyContent .ourClient .autoplay button.slick-arrow {
+    display: none !important;
+}
+
+.landingPage .bodyContent .ourClient .autoplay img {
+    width: 50%;
+}
+
+.landingPage .bodyContent .ourClient h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.landingPage .bodyContent .trailSection {
+    padding: 36px 36px 36px 36px;
+    background: white;
+    box-shadow: 0px 0px 10px 5px black;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.landingPage .bodyContent .trailSection p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.landingPage .bodyContent .trailSection a:hover {
+    background: #373737b8;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px 5px #d5d1d1;
+    font-size: large;
+}
+
+.landingPage .bodyContent .trailSection a {
+    color: #ffffff;
+    text-decoration: none;
+    background: #373737;
+    padding: 10px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px #1615158c;
+}
+
+.landingPage .bodyContent p.before_after_sliderLevel {
+    background: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.landingPage .bodyContent .EditingServices {
+    box-shadow: 0px 0px 10px 5px black;
+    margin-left: 13px;
+}
+
+.landingPage .bodyContent .EditingServices .twentytwenty-container img {
+    width: fit-content;
+}
+
+.landingPage .bodyContent .before_after_slider {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.landingPage .bodyContent .before_after_slider > * {
+    position: absolute;
+}
+
+.landingPage .bodyContent .black_white {
+    overflow: hidden;
+}
+
+.landingPage .bodyContent .paymentSection {
+    background: white;
+    margin-top: 20px;
+    padding: 36px 0px 36px 36px;
+    box-shadow: 0px 0px 10px 5px black;
+    margin-left: 15px;
+}
+
+.landingPage .bodyContent .paymentSection .paymentGateway h3 {
+    margin-bottom: 10px;
+}
+
+.landingPage .bodyContent .paymentSection .paymentGateway {
+    text-align: center;
+}
+
+.landingPage .bodyContent .paymentSection .paymentGateway img.img-fluid {
+    max-width: 50%;
+    height: auto;
+    margin: 10px;
+}
+
+.landingPage .bodyContent .paymentSection h3 {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.landingPage .bodyContent .elevateServices {
+    color: #c5c5c5;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+
+
+
+
+
+
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item img {
+    max-width: 200px;
+    max-height: 100px;
+    margin: 0 5px;
+}
+
+.social-bar-component-inner {
+    display: flex;
+    align-items: center;
+}
+
+.social-bar-component-inner {
+    position: absolute;
+    bottom: 0px;
+    left: 4.6875rem;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    width: 100vh;
+    height: 4.6875rem;
+    justify-content: flex-start;
+}
+
+.social-bar-component-inner-wrapper-copy {
+    padding-left: 8.125rem;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.social-bar-component-inner-wrapper-copy {
+    position: relative;
+    letter-spacing: .8em;
+    text-transform: uppercase;
+}
+
+.social-bar-component-inner-wrapper {
+    height: 1em;
+    padding: 0px 1.875rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.social-bar-component-inner-wrapper-copy:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    width: 3.125rem;
+    height: 1px;
+    background-color: #c5c5c5;
+}
+
+.social-bar-component.dark-page {
+    color: #c5c5c5;
+}
+
+.social-bar-component {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 4.6875rem;
+    height: 100%;
+}
+
+.social-bar-component-inner-wrapper {
+    height: 1em;
+    padding: 0px 1.875rem;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.social-bar-component.dark-page svg {
+    fill: #c5c5c5;
+}

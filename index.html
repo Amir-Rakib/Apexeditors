@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Apexeditors</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/fontawesome.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
+    <style>
+        .social-bar-component {
+            position: relative;
+            transition: color 500ms;
+        }
+
+        .social-bar-component.dark-page {
+            color: #c5c5c5;
+        }
+
+        .social-bar-component {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 4.6875rem;
+            height: 100%;
+        }
+
+
+
+        .social-bar-component-inner {
+            position: absolute;
+            bottom: 0px;
+            left: 5.6875rem;
+            transform: rotate(-90deg);
+            transform-origin: bottom left;
+            width: 100vh;
+            height: 4.6875rem;
+            justify-content: flex-start;
+        }
+
+
+        .social-bar-component-inner-wrapper {
+            height: 1em;
+            padding: 0px 1.875rem;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        .social-bar-component.dark-page svg {
+            fill: #c5c5c5;
+        }
+
+        .social-bar-component-inner-wrapper-links a svg {
+            transform: rotate(90deg);
+        }
+
+        .social-bar-component-inner-wrapper-links a svg {
+            display: block;
+            width: 15%;
+        }
+
+        .social-bar-component-inner {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+
+
+
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            width: 1200%;
+            /* Total width of all slides (12 images x 200% each) */
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 16.66%;
+            /* Width of each slide (100% / 12) */
+            height: 100%;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #fff;
+            cursor: ew-resize;
+        }
+
+
+
+
+        /* CSS styles for the side navbar */
+        #sidebar {
+            width: 50px;
+            height: 100vh;
+            background-color: #373737;
+            color: #fff;
+            position: fixed;
+            left: 0;
+            top: 100px;
+        }
+
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #sidebar ul li {
+            padding: 10px;
+            rotate: 90deg;
+            margin: 10px 0px;
+        }
+
+        #sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        #sidebar ul li a:hover {
+            color: #ddd;
+        }
+
+        #sidebar ul .vr {
+            align-self: stretch;
+            width: 2px;
+            min-height: 4em;
+            background-color: currentcolor;
+            opacity: 1;
+            rotate: 90deg;
+            margin: 0px 0px 0px 20px;
+        }
+
+        #sidebar ul li a svg {
+            color: #373737;
+            text-decoration: none;
+            background: #fff;
+            padding: 7px 8px;
+            border-radius: 134px;
+            font-size: 24px;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body class="landingPage">
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="image/LOGO.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menuItems">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">IMAGE EDITING SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PROTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="bodyContent">
+        <div class="banner">
+            <img src="image/Post.png" alt="Banner Image">
+        </div>
+        <div class="serviceQuality">
+            <h2>PROFESSIONAL AND SKILLED HAND</h2>
+            <p>IMAGE EDITING SERVICES</p>
+            <div class="row serviceQualityImg">
+                <div class="col-md-2">
+                    <div class="image-item">
+                        <img src="image/ICON 1.png" alt="Image 1">
+                        <div class="image-name">24X7 SUPPORT</div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="image-item">
+                        <img src="image/ICON 2.png" alt="Image 2">
+                        <div class="image-name">Free TRIAL</div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="image-item">
+                        <img src="image/ICON.png" alt="Image 3">
+                        <div class="image-name">AFFORDABLE PRICE</div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="image-item">
+                        <img src="image/ICON 4.png" alt="Image 4">
+                        <div class="image-name">ON TIME DELIVERY</div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="image-item">
+                        <img src="image/ICON 5.png" alt="Image 5">
+                        <div class="image-name">QUALITY ASSURANCE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="EditingServices">
+            <div class="EditingServicesTitle">
+                <p>IMAGE EDITING SERVICES</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/Background-Remove/background-before.png" width="260" height="260" alt="" />
+                        <img src="image/Background-Remove/background-after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/Background-Remove/background-before.png" width="260" height="260" alt="" />
+                        <img src="image/Background-Remove/background-after.png" width="260" height="260" alt="black_white" />
+
+                    </div>
+                    <p class="before_after_sliderLevel">BACKGROUD REMOVE</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/MASKING/before.png" width="260" height="260" alt="" />
+
+                        <img src="image/MASKING/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/MASKING/mask-Before.png" width="260" height="260" alt="" />
+                        <img src="image/MASKING/mask-After.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">IMAGE MASKING</p>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                       <!-- <img src="image/Flatlay/before.png" width="260" height="260" alt="" />
+                        <img src="image/Flatlay/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/Flatlay/flatlay-before.png" width="260" height="260" alt="" />
+                        <img src="image/Flatlay/flatlay-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">FLATLAY EDIT</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/Ghost Mannequin/before.png" width="260" height="260" alt="" />
+                        <img src="image/Ghost Mannequin/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/Ghost Mannequin/ghost-before.png" width="260" height="260" alt="" />
+                        <img src="image/Ghost Mannequin/ghost-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">GHOST MANNEQUIN</p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/SHADOW/before.png" width="260" height="260" alt="" />
+                        <img src="image/SHADOW/after.png" width="260" height="260" alt="black_white" />-->
+                        
+                        <img src="image/SHADOW/shadow-before.png" width="260" height="260" alt="" />
+                        <img src="image/SHADOW/shadow-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">SHADOW/REFLECTION CREATE</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/Model-Retouch/before.png" width="260" height="260" alt="" />
+                        <img src="image/Model-Retouch/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/Model-Retouch/model-before.png" width="260" height="260" alt="" />
+                        <img src="image/Model-Retouch/model-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">MODEL RETOUCHING</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/IMAGE-MANUPULATION/before.png" width="260" height="260" alt="" />
+                        <img src="image/IMAGE-MANUPULATION/after.png" width="260" height="260" alt="black_white" />-->
+                        
+                        <img src="image/IMAGE-MANUPULATION/manup-before.png" width="260" height="260" alt="" />
+                        <img src="image/IMAGE-MANUPULATION/manup-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">IMAGE MANUPULATION</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/Colour-Change/before.png" width="260" height="260" alt="" />
+                        <img src="image/Colour-Change/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/Colour-Change/colour-before.png" width="260" height="260" alt="" />
+                        <img src="image/Colour-Change/colour-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">COLOUR CHANGE</p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/ENHANCRMENT/before.png" width="260" height="260" alt="" />
+                        <img src="image/ENHANCRMENT/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/ENHANCRMENT/enhan-before.png" width="260" height="260" alt="" />
+                        <img src="image/ENHANCRMENT/enhan-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">IMAGE ENHANCRMENT</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/PRODUCT-RETOUCH/before.png" width="260" height="260" alt="" />
+                        <img src="image/PRODUCT-RETOUCH/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/PRODUCT-RETOUCH/product-before.png" width="260" height="260" alt="" />
+                        <img src="image/PRODUCT-RETOUCH/product-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">PRODUCT RETOUCH</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/JEWELRY-RETOUCH/before.png" width="260" height="260" alt="" />
+                        <img src="image/JEWELRY-RETOUCH/after.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/JEWELRY-RETOUCH/jewelry-before.png" width="260" height="260" alt="" />
+                        <img src="image/JEWELRY-RETOUCH/jewelry-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">JEWELRY RETOUCH</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="before_after_slide">
+                        <!--<img src="image/skin-retouch/before_pic.png" width="260" height="260" alt="" />
+                        <img src="image/skin-retouch/After_pic.png" width="260" height="260" alt="black_white" />-->
+                        <img src="image/skin-retouch/beauty-before.png" width="260" height="260" alt="" />
+                        <img src="image/skin-retouch/beauty-after.png" width="260" height="260" alt="black_white" />
+                    </div>
+                    <p class="before_after_sliderLevel">BEAUTY SKIN RETOUCH</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="elevateServices">
+            <h2>Elevate Your Images with Top-notch Image Editing Services</h2>
+        </div>
+
+        <div class="ourClient">
+            <h2>OUR CLIENTS</h2>
+
+
+            <div class="autoplay">
+                <div>
+                    <img src="image/skora.png" alt="Logo 1">
+                </div>
+                <div>
+                    <img src="image/skech.png" alt="Logo 2">
+                </div>
+                <div>
+                    <img src="image/minnie.png" alt="Logo 3">
+                </div>
+                <div>
+                    <img src="image/members.png" alt="Logo 4">
+                </div>
+                <div>
+                    <img src="image/layer8.PNG" alt="Logo 5">
+                </div>
+                <div>
+                    <img src="image/jay.png" alt="Logo 6">
+                </div>
+                <div>
+                    <img src="image/jason.png" alt="Logo 7">
+                </div>
+                <div>
+                    <img src="image/jake.png" alt="Logo 8">
+                </div>
+                <div>
+                    <img src="image/biom.png" alt="Logo 9">
+                </div>
+                <div>
+                    <img src="image/champ.png" alt="Logo 10">
+                </div>
+                <div>
+                    <img src="image/dream.png" alt="Logo 11">
+                </div>
+                <div>
+                    <img src="image/fils.png" alt="Logo 12">
+                </div>
+            </div>
+        </div>
+
+        <div class="trailSection">
+            <h2>SEND US A FREE TRIAL JOB</h2>
+            <p>A trial job will ensure you the quality of our work and how responsive we are </p>
+            <a href="#">SEND FREE TRIAL</a>
+
+        </div>
+
+
+        <div class="paymentSection">
+            <div class="row">
+
+                <div class="col-md-2 text-column">
+                    <h3>ADDRESS</h3>
+                    <address>UPAZILA ROAD <br>
+                        MAGURA KHULNA <br>
+                        BANGLADESH
+                    </address>
+                </div>
+                <div class="col-md-3 text-column">
+                    <h3>CONTACT</h3>
+                    EMAIL :info@apexeditors.com
+                    WHATSAPP : <br>
+                    CONTACT :
+                </div>
+                <div class="col-md-7">
+                    <div class="paymentGateway">
+                        <h3>PAYMENT GATEWAY</h3>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-5">
+                                <img src="image/Layer 34.png" alt="Payment Gateway 1 Logo" class="img-fluid">
+
+                            </div>
+                            <div class="col-md-5">
+                                <img src="image/Layer 33.png" alt="Payment Gateway 1 Logo" class="img-fluid">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-5">
+
+                                <img src="image/american.png" alt="Payment Gateway 1 Logo" class="img-fluid">
+
+                            </div>
+                            <div class="col-md-5">
+                                <img src="image/V.png" alt="Payment Gateway 1 Logo" class="img-fluid">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!--<div class="social-bar-component dark-page">
+        <div class="social-bar-component-inner">
+            <div class="social-bar-component-inner-wrapper">
+                <div class="social-bar-component-inner-wrapper-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-icon-instagram-component">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg></a>
+                        
+                        
+                        </div>
+                <div class="social-bar-component-inner-wrapper-copy">Follow Us</div>
+            </div>
+        </div>
+    </div>-->
+    <div id="sidebar">
+        <ul>
+            <!--<li><a href="#">Follow</a></li>-->
+            <li>
+                <div class="vr"></div>
+            </li>
+            <li><a href="https://instagram.com/apexeditors.bd?igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=01911456794"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="skype:Eyaminur Rahman?chat"><i class="fa-brands fa-skype"></i></a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <script>
+        var $black_white = $('.black_white'),
+            img_width = $('.black_white img').width(),
+            init_split = Math.round(img_width / 2);
+
+        $black_white.width(init_split);
+
+        $('.before_after_slider').mousemove(function(e) {
+            var offX = (e.offsetX || e.clientX - $black_white.offset().left);
+            $black_white.width(offX);
+        });
+
+        $('.before_after_slider').mouseleave(function(e) {
+            $black_white.stop().animate({
+                width: init_split
+            }, 2000)
+        });
+
+    </script>
+
+    <script>
+        $('.autoplay').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 500,
+        });
+
+    </script>
+
+    <script>
+        $(function() {
+            $('.before_after_slide').twentytwenty()
+        });
+
+    </script>
+
+
+</body>
+
+</html>

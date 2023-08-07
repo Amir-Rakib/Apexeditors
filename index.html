@@ -34,68 +34,6 @@
 
 
     <style>
-        .social-bar-component {
-            position: relative;
-            transition: color 500ms;
-        }
-
-        .social-bar-component.dark-page {
-            color: #c5c5c5;
-        }
-
-        .social-bar-component {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            width: 4.6875rem;
-            height: 100%;
-        }
-
-
-
-        .social-bar-component-inner {
-            position: absolute;
-            bottom: 0px;
-            left: 5.6875rem;
-            transform: rotate(-90deg);
-            transform-origin: bottom left;
-            width: 100vh;
-            height: 4.6875rem;
-            justify-content: flex-start;
-        }
-
-
-        .social-bar-component-inner-wrapper {
-            height: 1em;
-            padding: 0px 1.875rem;
-            flex-wrap: nowrap;
-            align-items: center;
-        }
-
-        .social-bar-component.dark-page svg {
-            fill: #c5c5c5;
-        }
-
-        .social-bar-component-inner-wrapper-links a svg {
-            transform: rotate(90deg);
-        }
-
-        .social-bar-component-inner-wrapper-links a svg {
-            display: block;
-            width: 15%;
-        }
-
-        .social-bar-component-inner {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-        }
-
-
-
-
-
-
         .container {
             position: relative;
             width: 500px;
@@ -149,10 +87,9 @@
         #sidebar {
             width: 50px;
             height: 100vh;
-            background-color: #373737;
             color: #fff;
             position: fixed;
-            left: 0;
+            left: 10px;
             top: 100px;
         }
 
@@ -219,7 +156,7 @@
                         <a class="nav-link" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">IMAGE EDITING SERVICES</a>
+                        <a class="nav-link" href="service.html">IMAGE EDITING SERVICES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PROTFOLIO</a>
@@ -303,7 +240,7 @@
 
                 <div class="col-md-3">
                     <div class="before_after_slide">
-                       <!-- <img src="image/Flatlay/before.png" width="260" height="260" alt="" />
+                        <!-- <img src="image/Flatlay/before.png" width="260" height="260" alt="" />
                         <img src="image/Flatlay/after.png" width="260" height="260" alt="black_white" />-->
                         <img src="image/Flatlay/flatlay-before.png" width="260" height="260" alt="" />
                         <img src="image/Flatlay/flatlay-after.png" width="260" height="260" alt="black_white" />
@@ -327,7 +264,7 @@
                     <div class="before_after_slide">
                         <!--<img src="image/SHADOW/before.png" width="260" height="260" alt="" />
                         <img src="image/SHADOW/after.png" width="260" height="260" alt="black_white" />-->
-                        
+
                         <img src="image/SHADOW/shadow-before.png" width="260" height="260" alt="" />
                         <img src="image/SHADOW/shadow-after.png" width="260" height="260" alt="black_white" />
                     </div>
@@ -346,7 +283,7 @@
                     <div class="before_after_slide">
                         <!--<img src="image/IMAGE-MANUPULATION/before.png" width="260" height="260" alt="" />
                         <img src="image/IMAGE-MANUPULATION/after.png" width="260" height="260" alt="black_white" />-->
-                        
+
                         <img src="image/IMAGE-MANUPULATION/manup-before.png" width="260" height="260" alt="" />
                         <img src="image/IMAGE-MANUPULATION/manup-after.png" width="260" height="260" alt="black_white" />
                     </div>
@@ -519,19 +456,6 @@
 
     </section>
 
-    <!--<div class="social-bar-component dark-page">
-        <div class="social-bar-component-inner">
-            <div class="social-bar-component-inner-wrapper">
-                <div class="social-bar-component-inner-wrapper-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-icon-instagram-component">
-                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-                        </svg></a>
-                        
-                        
-                        </div>
-                <div class="social-bar-component-inner-wrapper-copy">Follow Us</div>
-            </div>
-        </div>
-    </div>-->
     <div id="sidebar">
         <ul>
             <!--<li><a href="#">Follow</a></li>-->
@@ -573,7 +497,7 @@
             slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 500,
+            autoplaySpeed: 50,
         });
 
     </script>

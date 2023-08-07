@@ -142,6 +142,8 @@ body.landingPage h2 {
 .landingPage .bodyContent .EditingServices {
     box-shadow: 0px 0px 10px 5px black;
     margin-left: 13px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .landingPage .bodyContent .EditingServices .twentytwenty-container img {
@@ -195,7 +197,120 @@ body.landingPage h2 {
     margin: 20px 0px;
 }
 
+.landingPage .bodyContent .before_after_slide.twentytwenty-container img {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100% !important;
+}
 
+
+
+
+
+
+
+/****Our Services Page****/
+
+.ourServices .ourServicesTitel h1 {
+    FONT-WEIGHT: 500;
+    font-family: Algerian;
+    font-size: 140px;
+    color: #8d8d8d59;
+    text-align: center;
+    letter-spacing: 20px;
+    margin: 0px;
+}
+
+.ourServicesTitel {
+    margin-bottom: 20px;
+}
+
+.ourServices {
+    margin-left: 50px;
+}
+
+.ourServices .ourServicesTitel p {
+    background: #ffffff59;
+    border: #8b8b8b8a solid 1px;
+    float: inherit;
+    position: absolute;
+    top: 48px;
+    max-width: 870px;
+    text-align: center;
+    right: 249px;
+    padding: 10px 75px;
+}
+
+.ourServices .bodyContentText {
+    text-align: center;
+}
+
+.ourServices p.bodyContentTextTitel {
+    border: black solid 1px;
+    text-align: center;
+    display: inline-block;
+    padding: 2px 25px;
+}
+.ourServices .bodyContent .bodyContentImg img {
+    vertical-align: middle;
+    width: -webkit-fill-available;
+}
+
+
+
+
+/* CSS styles for the side navbar 
+#sidebar {
+    width: 50px;
+    height: 100vh;
+    color: #fff;
+    position: fixed;
+    left: 10px;
+    top: 100px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 10px;
+    rotate: 90deg;
+    margin: 10px 0px;
+}
+
+#sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#sidebar ul li a:hover {
+    color: #ddd;
+}
+
+#sidebar ul .vr {
+    align-self: stretch;
+    width: 2px;
+    min-height: 4em;
+    background-color: currentcolor;
+    opacity: 1;
+    rotate: 90deg;
+    margin: 0px 0px 0px 20px;
+}
+
+#sidebar ul li a svg {
+    color: #373737;
+    text-decoration: none;
+    background: #fff;
+    padding: 7px 8px;
+    border-radius: 134px;
+    font-size: 24px;
+}
+*/
 
 
 

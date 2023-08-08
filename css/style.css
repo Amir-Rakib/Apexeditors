@@ -14,7 +14,7 @@
 
 body.landingPage {
     background-color: #373737;
-    margin-left: 50px;
+    margin-left: 55px;
 
 }
 
@@ -28,7 +28,7 @@ body.landingPage h2 {
 }
 
 .landingPage .bodyContent .serviceQuality .row.serviceQualityImg .image-item img {
-    width: 50%;
+    width: 35%;
 }
 
 .landingPage .bodyContent .serviceQuality {
@@ -137,6 +137,7 @@ body.landingPage h2 {
     background: white;
     text-align: center;
     margin-top: 5px;
+    width: 90%;
 }
 
 .landingPage .bodyContent .EditingServices {
@@ -201,7 +202,7 @@ body.landingPage h2 {
     position: absolute;
     top: 0;
     display: block;
-    width: 100% !important;
+    width: 90% !important;
 }
 
 
@@ -218,7 +219,7 @@ body.landingPage h2 {
     font-size: 140px;
     color: #8d8d8d59;
     text-align: center;
-    letter-spacing: 20px;
+    letter-spacing: 24px;
     margin: 0px;
 }
 
@@ -228,6 +229,7 @@ body.landingPage h2 {
 
 .ourServices {
     margin-left: 50px;
+    padding-left: 25px;
 }
 
 .ourServices .ourServicesTitel p {
@@ -246,6 +248,11 @@ body.landingPage h2 {
     text-align: center;
 }
 
+.ourServices .bodyContent .bodyContentText p.bodyContentTextBody {
+    padding: 10px 30px 30px 30px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
 .ourServices p.bodyContentTextTitel {
     border: black solid 1px;
     text-align: center;

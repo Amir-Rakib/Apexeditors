@@ -42,8 +42,8 @@
             height: 100vh;
             color: #fff;
             position: fixed;
-            left: 10px;
-            top: 100px;
+            left: 12px;
+            top: 596px;
         }
 
         .ourServicesSidebar #sidebar ul {
@@ -113,17 +113,16 @@
             padding: 0;
         }
 
-        .ourServices .bodyContent .bodyContentText ul li {
+       .ourServices .bodyContent .bodyContentText ul li {
             list-style-type: circle;
             list-style-position: inside;
-            width: 5px;
-            height: 33px;
+            width: 6px;
+            height: 40px;
             border-radius: 10px;
-            background-image: radial-gradient(white 30%, #000000e3 40%, #aca9a9ad 70%);
-            margin: 0px 30px;
+            background-image: radial-gradient(black 100%, #000000e3 100%, #aca9a9ad 100%);
+            margin: -14px 90px 0px 90px;
             display: block;
             position: relative;
-            box-shadow: 0px 4px 3px 0px #000;
         }
 
         .ourServices .bodyContent .bodyContentText .top-div {
@@ -154,35 +153,43 @@
             height: 100vh;
         }
 
+        /* Set the size of the image container 
         .image-wrapper {
             position: relative;
-            overflow: hidden;
             width: 300px;
-            /* Adjust this size according to your images */
             height: auto;
+            overflow: hidden;
         }
+        */
 
-        img {
+        /* Position the overlay container 
+        .image-overlay {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        */
+
+        /* Set the size of the images */
+        .image {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* Hide the after image by default */
+        /* Initially hide the after image */
         .after-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            clip-path: polygon(0 0, 0 100%, 0 100%, 0% 0%);
-            opacity: 0;
-            transition: clip-path 0.3s ease, opacity 0.3s ease 0.2s;
-            /* Add transition delay here */
+            display: none;
         }
 
-        /* Reveal the after image on hover */
-        .before-image:hover+.after-image {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            opacity: 1;
+        /* Show the after image on hover */
+        .image-overlay:hover .image {
+            display: none;
+        }
+
+        .image-overlay:hover .after-image {
+            display: block;
         }
 
     </style>
@@ -207,13 +214,6 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                     </ul>
                                 </div>
                                 <div class="year-div">
@@ -230,8 +230,10 @@
                     <div class="bodyContentImg">
                         <div class="image-container">
                             <div class="image-wrapper">
-                                <img src="image/our service/BACKGROUND REMOVE/RAW.jpg" alt="Before" class="before-image">
-                                <img src="image/our%20service/BACKGROUND%20REMOVE/EDITED.jpg" alt="After" class="after-image">
+                                <div class="image-overlay">
+                                    <img src="image\our service\BACKGROUND REMOVE\RAW.jpg" alt="Before" class="image">
+                                    <img src="image\our service\BACKGROUND REMOVE\EDITED.jpg" alt="After" class="image after-image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -243,7 +245,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\Image Masking\RAW.jpg" alt="Before" class="image">
+                                    <img src="image\our service\Image Masking\EDITED.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -255,13 +264,6 @@
                             <div class="sub-div">
                                 <div class="top-div">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -293,13 +295,6 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                     </ul>
                                 </div>
                                 <div class="year-div">
@@ -314,7 +309,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\Flatlay\flatlay-2.jpg" alt="Before" class="image">
+                                    <img src="image\our service\Flatlay\flatlay.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -323,7 +325,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\Ghost mannequin\RAW.jpg" alt="Before" class="image">
+                                    <img src="image\our service\Ghost mannequin\EDITED.JPG" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -335,13 +344,6 @@
                             <div class="sub-div">
                                 <div class="top-div">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -373,13 +375,6 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                     </ul>
                                 </div>
                                 <div class="year-div">
@@ -394,7 +389,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\Model Retouch\RAW.JPG" alt="Before" class="image">
+                                    <img src="image\our service\Model Retouch\EDITED.JPG" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,7 +405,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\PRODUCT RETOUCH\Raw.jpg" alt="Before" class="image">
+                                    <img src="image\our service\PRODUCT RETOUCH\Edited.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -415,13 +424,6 @@
                             <div class="sub-div">
                                 <div class="top-div">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -452,13 +454,6 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                     </ul>
                                 </div>
                                 <div class="year-div">
@@ -473,7 +468,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\JEWELRY RETOUCH\RAW.jpg" alt="Before" class="image">
+                                    <img src="image\our service\JEWELRY RETOUCH\EDITED.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -482,7 +484,22 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\BEAUTY SKIN RETOUCH\RAW.jpg" alt="Before" class="image">
+                                    <img src="image\our service\BEAUTY SKIN RETOUCH\EDITED.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <div class="image-wrapper">
+                                    <div class="image-overlay">
+                                        <img src="before.jpg" alt="Before" class="image">
+                                        <img src="after.jpg" alt="After" class="image after-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -494,13 +511,6 @@
                             <div class="sub-div">
                                 <div class="top-div">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -531,13 +541,6 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                     </ul>
                                 </div>
                                 <div class="year-div">
@@ -552,7 +555,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\COLOR CHANGE\Color Change1.jpg" alt="Before" class="image">
+                                    <img src="image\our service\COLOR CHANGE\Color Change2.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -561,7 +571,22 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="image\our service\IMAGE ENHANCEMENT\Raw.jpg" alt="Before" class="image">
+                                    <img src="image\our service\IMAGE ENHANCEMENT\Edited.jpg" alt="After" class="image after-image">
+                                </div>
+                                <div class="image-container">
+                                    <div class="image-wrapper">
+                                        <div class="image-overlay">
+                                            <img src="before.jpg" alt="Before" class="image">
+                                            <img src="after.jpg" alt="After" class="image after-image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -573,13 +598,6 @@
                             <div class="sub-div">
                                 <div class="top-div">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -610,13 +628,6 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                     </ul>
                                 </div>
                                 <div class="year-div">
@@ -631,7 +642,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="before.jpg" alt="Before" class="image">
+                                    <img src="after.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -640,7 +658,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentImg">
-                        <img src="image/our service/BACKGROUND REMOVE/EDITED.jpg" alt="">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <div class="image-overlay">
+                                    <img src="before.jpg" alt="Before" class="image">
+                                    <img src="after.jpg" alt="After" class="image after-image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -652,13 +677,6 @@
                             <div class="sub-div">
                                 <div class="top-div">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>

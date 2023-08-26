@@ -137,7 +137,7 @@ body.landingPage h2 {
     background: white;
     text-align: center;
     margin-top: 5px;
-    width: 90%;
+    width: 100%;
 }
 
 .landingPage .bodyContent .EditingServices {
@@ -202,7 +202,9 @@ body.landingPage h2 {
     position: absolute;
     top: 0;
     display: block;
-    width: 90% !important;
+    width: 100%;
+    object-fit: fill;
+    height: auto;
 }
 
 
@@ -244,6 +246,10 @@ body.landingPage h2 {
     padding: 10px 75px;
 }
 
+.ourServices{
+    width: 100%;
+}
+
 .ourServices .bodyContentText {
     text-align: center;
 }
@@ -252,6 +258,10 @@ body.landingPage h2 {
     padding: 10px 30px 30px 30px;
     letter-spacing: 1px;
     line-height: 24px;
+    margin-bottom: 8rem;
+}
+.ourServices .bodyContent .bodyContentImg .image-container {
+    height: 44vh;
 }
 .ourServices p.bodyContentTextTitel {
     border: black solid 1px;
@@ -261,7 +271,6 @@ body.landingPage h2 {
 }
 .ourServices .bodyContent .bodyContentImg img {
     vertical-align: middle;
-    width: -webkit-fill-available;
 }
 
 

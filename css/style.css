@@ -15,6 +15,7 @@
 body.landingPage {
     background-color: #373737;
     margin-left: 55px;
+    width: 96.5%;
 
 }
 
@@ -203,9 +204,10 @@ body.landingPage h2 {
     top: 0;
     display: block;
     width: 100%;
-    object-fit: fill;
-    height: auto;
+    object-fit: cover;
+    height: fit-content;
 }
+
 
 
 
@@ -219,7 +221,7 @@ body.landingPage h2 {
     FONT-WEIGHT: 500;
     font-family: Algerian;
     font-size: 140px;
-    color: #8d8d8d59;
+    color: #dadada;
     text-align: center;
     letter-spacing: 24px;
     margin: 0px;
@@ -235,19 +237,23 @@ body.landingPage h2 {
 }
 
 .ourServices .ourServicesTitel p {
-    background: #ffffff59;
-    border: #8b8b8b8a solid 1px;
+    background: #fafafa73;
+    border: #8b8b8b solid 1px;
     float: inherit;
     position: absolute;
-    top: 48px;
-    max-width: 870px;
+    top: 13vh;
+    width: 50vw;
     text-align: center;
-    right: 249px;
-    padding: 10px 75px;
+    right: 21vw;
+    padding: 10px 38px;
+    font-size: 20px;
 }
 
+.ourServices section.bodyContent {
+    margin-top: 10vh;
+}
 .ourServices{
-    width: 100%;
+    width: 98%;
 }
 
 .ourServices .bodyContentText {
@@ -257,17 +263,18 @@ body.landingPage h2 {
 .ourServices .bodyContent .bodyContentText p.bodyContentTextBody {
     padding: 10px 30px 30px 30px;
     letter-spacing: 1px;
-    line-height: 24px;
+    line-height: 40px;
     margin-bottom: 8rem;
+    font-size: 20px;
 }
-.ourServices .bodyContent .bodyContentImg .image-container {
-    height: 44vh;
-}
+
 .ourServices p.bodyContentTextTitel {
     border: black solid 1px;
+    border-bottom: black solid 2px;
     text-align: center;
     display: inline-block;
-    padding: 2px 25px;
+    padding: 7px 25px;
+    width: 30vw;
 }
 .ourServices .bodyContent .bodyContentImg img {
     vertical-align: middle;

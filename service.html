@@ -16,7 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/fontawesome.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -29,6 +28,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
 
 
@@ -38,7 +40,7 @@
     <style>
         /* CSS styles for the side navbar */
         .ourServicesSidebar #sidebar {
-            width: 50px;
+            width: 3vw;
             height: 100vh;
             color: #fff;
             position: fixed;
@@ -92,19 +94,12 @@
 
 
 
-
-
-
-
-
         .ourServices .bodyContent .bodyContentText .main-div {
             border: 1px solid #3231315c;
             position: absolute;
             top: 60px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
+            width: 45vw;
+            height: 50vh;
             box-shadow: 0 7px 10px -5px gray;
         }
 
@@ -116,18 +111,19 @@
        .ourServices .bodyContent .bodyContentText ul li {
             list-style-type: circle;
             list-style-position: inside;
-            width: 6px;
-            height: 40px;
-            border-radius: 10px;
-            background-image: radial-gradient(black 100%, #000000e3 100%, #aca9a9ad 100%);
-            margin: -14px 90px 0px 90px;
+            width: 3px;
+            height: 35px;
+            border-radius: 30px;
+            background-image: radial-gradient(#bdbcbf 50%, #000000e3 82%, #aca9a9ad 50%);
+            margin: -0.5vw 10vw 0vw 10vw;
             display: block;
             position: relative;
         }
+        
 
         .ourServices .bodyContent .bodyContentText .top-div {
             position: absolute;
-            top: -18px;
+            top: -8px;
         }
 
         .ourServices .bodyContent .bodyContentText .sub-div {
@@ -140,12 +136,21 @@
             padding: 10px;
             margin-top: 10px;
         }
+        .ourServices .footer h5 {
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+        .ourServices .footer p{
+            letter-spacing: 1px;
+            font-weight: 100;
+            font-size: 14px;
+        }
 
 
 
 
 
-
+/*
         .image-container {
             display: flex;
             justify-content: center;
@@ -153,7 +158,7 @@
             height: 100vh;
         }
 
-        /* Set the size of the image container 
+         Set the size of the image container 
         .image-wrapper {
             position: relative;
             width: 300px;
@@ -172,8 +177,8 @@
         */
 
         /* Set the size of the images */
-        .image {
-            width: 100%;
+         .image {
+            width: 45vw;
             height: auto;
             display: block;
         }
@@ -192,11 +197,101 @@
             display: block;
         }
 
+        .ourServices .bodyContent .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: calc(-1 * var(--bs-gutter-y));
+            margin-right: calc(1.5 * var(--bs-gutter-x));
+            margin-left: calc(0.5 * var(--bs-gutter-x));
+            background-color: #f5f5f5;
+            margin-bottom: 10px;
+        }
+
+        .ourServices .trial .trial-text p {
+            margin: 0px;
+        }
+        .ourServices .trial .trial-btn {
+            margin-top: 1vh;
+        }
+
+        .ourServices .footer.text-center {
+            background-color: whitesmoke;
+        }
+        .ourServices .footer .social-media ul {
+            list-style: none;
+            display: inline-flex;
+            padding: 0px;
+        }
+        .ourServices .footer .social-media ul li {
+            margin: 0 15px;
+            font-size: 30px;
+        }
+        .ourServices .footer .social-media ul li:first-child {
+            margin-left: 0px;
+        }
+        .ourServices .footer .social-media ul li:last-child {
+            margin-right: 0px;
+        }
+        .ourServices .trial .trial-btn {
+            position: fixed;
+            right: 19vw;
+            bottom: 14.85vh;
+        }
+        .ourServices .trial .trial-btn #trialButton{ 
+            display: none;
+        }
+        .ourServices .trial .trial-btn a {
+            text-decoration: none;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px 30px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 4px gray;
+        }
+        .ourServices .servicesMenu .servicesMenuItems a.nav-link {
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="ourServices">
+
+        <header class="container-fluid">
+            <nav class="navbar navbar-expand-lg servicesMenu">
+                <a class="navbar-brand" href="index.html">
+                    <img src="image/our service/logo2.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menuItems servicesMenuItems">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">IMAGE EDITING SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PROTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+
         <div class="ourServicesTitel">
             <h1>OUR SERVICES</h1>
             <p>We provide all types of editing services from raw images. All the services we provide can be seen below. Our team is skilled in all tasks of image editing. <br>We strive to provide the best customer service possible and are always happy to help our clients with any questions or concerns they may have.</p>
@@ -259,7 +354,7 @@
 
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">IMAGE MASKING</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -271,7 +366,8 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Image Masking Service is a process to reveal some objects and hide some unwanted portions from a photo. The mask can be any color, but usually, it is black or white. When the mask is applied to an image, the areas that are masked will become transparent, while the rest of the image will remain visible. Apex Editors graphics designers have the authentic experience to make any kind of image masking.
+
                                     </p>
                                 </div>
                             </div>
@@ -287,7 +383,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">FLATLAY EDIT</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -299,7 +395,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        A flat lay is a great way of presenting your products if you can't or don't want to use a model or mannequin. Using various editing techniques, flat-lay images can be transformed into visually stunning works of art that leave a lasting impression on viewers. This kind of retouching is done to present a lot of variants of a single kind of product on e-Commerce websites. The retouching required in these kinds of images is usually background removal, liquefy, crease removal, and spot removal. 
                                     </p>
                                 </div>
                             </div>
@@ -339,7 +435,7 @@
 
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">GHOST MANNEQUIN</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -351,7 +447,8 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        It is Removing the mannequin or model from a product is a good way of displaying the product. Ghost mannequin service helps eliminate the mannequin to give it a more 3D effect and increase focus on your product. A neck joint is required for example in a picture of a shirt, taken from the front while it's hanging and then again when it's inside out. The two pictures separately don't show the full image of the shirt. The neck joint is done to get a more accurate view of the shirt as a whole. In the world of image editing, neck joints have become a very common job.
+    
                                     </p>
                                 </div>
                             </div>
@@ -367,7 +464,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">MODEL RETOUCHING</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -379,7 +476,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Model retouching is a post-processing technique used in fashion, beauty, and portrait photography to enhance the appearance of models and achieve a desired aesthetic. You can further develop your model within Model Retouch and use it for any business function.
                                     </p>
                                 </div>
                             </div>
@@ -419,7 +516,7 @@
 
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">PRODUCT RETOUCH</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -431,7 +528,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Product Retouch retouching is a process that can be used to improve the appearance of any product image. This can be done by removing blemishes, smoothing wrinkles, and improving the overall tone of the image. Image retouching can be a useful tool for those who want to improve their appearance in photographs.  So product images are really important to sell products. The product retouching process makes images look pleasant to attract consumers. Apex Editors is specialized in product retouch services. 
                                     </p>
                                 </div>
                             </div>
@@ -446,7 +543,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">JEWELRY RETOUCH</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -458,7 +555,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Jewelry is one of the most expensive items that consumers buy. It's important to make sure that the images they see are not only properly dusted, scratched, color adjusted, and retouched to make them shine like when you see them face to face. Click the link below to know more about jewelry restoration.
                                     </p>
                                 </div>
                             </div>
@@ -491,14 +588,6 @@
                                     <img src="image\our service\BEAUTY SKIN RETOUCH\EDITED.jpg" alt="After" class="image after-image">
                                 </div>
                             </div>
-                            <div class="image-container">
-                                <div class="image-wrapper">
-                                    <div class="image-overlay">
-                                        <img src="before.jpg" alt="Before" class="image">
-                                        <img src="after.jpg" alt="After" class="image after-image">
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -506,7 +595,7 @@
 
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">BEAUTY SKIN RETOUCH</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -517,8 +606,8 @@
                                     </ul>
                                 </div>
                                 <div class="year-div">
-                                    <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                    <p class="bodyContentTextBody">Beauty or skin retouching is all about focusing on small details. Beauty retouching can make your model's skin look smoother and more beautiful.With the help of this, you can reduce the age of the model.
+
                                     </p>
                                 </div>
                             </div>
@@ -533,7 +622,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">COLOR CHANGE</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -545,7 +634,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Color manipulation or color change helps to display a particular product in different color variations that may be available. This helps reduce the cost of photographing every single color of the product, whether it's a mannequin, a model, or just a flat layer. Color correction is one of the biggest challenges in professional photography. At Apex Editors we specialize in challenges that we tackle with confidence as we are backed by years of experience and completely new color correction methods.
                                     </p>
                                 </div>
                             </div>
@@ -577,14 +666,6 @@
                                     <img src="image\our service\IMAGE ENHANCEMENT\Raw.jpg" alt="Before" class="image">
                                     <img src="image\our service\IMAGE ENHANCEMENT\Edited.jpg" alt="After" class="image after-image">
                                 </div>
-                                <div class="image-container">
-                                    <div class="image-wrapper">
-                                        <div class="image-overlay">
-                                            <img src="before.jpg" alt="Before" class="image">
-                                            <img src="after.jpg" alt="After" class="image after-image">
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -593,7 +674,7 @@
 
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">IMAGE ENHANCEMENT</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -605,7 +686,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Image enhancement is the process of improving the quality of an image. This can be done through various methods, such as increasing the contrast or brightness or sharpening the image. Image enhancement can be used to improve image quality for printing or display.
                                     </p>
                                 </div>
                             </div>
@@ -620,7 +701,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">SHADOW/REFLECTION CREATE</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -632,7 +713,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Shadows make a photo look better than before and after removing the background, shadows make the photo look realistic. Also, Adding a reflection shadow or mirror effect creates the illusion that the product featured in your photo is not just an isolated image, but has a depth and solidity that is From the relationship comes another surface.
                                     </p>
                                 </div>
                             </div>
@@ -645,8 +726,8 @@
                         <div class="image-container">
                             <div class="image-wrapper">
                                 <div class="image-overlay">
-                                    <img src="before.jpg" alt="Before" class="image">
-                                    <img src="after.jpg" alt="After" class="image after-image">
+                                    <img src="image/our service/SHADOW/Raw.jpg" alt="Before" class="image">
+                                    <img src="image/our service/SHADOW/Edited.jpg" alt="After" class="image after-image">
                                 </div>
                             </div>
                         </div>
@@ -661,8 +742,8 @@
                         <div class="image-container">
                             <div class="image-wrapper">
                                 <div class="image-overlay">
-                                    <img src="before.jpg" alt="Before" class="image">
-                                    <img src="after.jpg" alt="After" class="image after-image">
+                                    <img src="image/our service/IMAGE MANUOULATION/RAW.jpg" alt="Before" class="image">
+                                    <img src="image/our service/IMAGE MANUOULATION/EDIT.jpg" alt="After" class="image after-image">
                                 </div>
                             </div>
                         </div>
@@ -672,7 +753,7 @@
 
                 <div class="col-md-6">
                     <div class="bodyContentText">
-                        <p class="bodyContentTextTitel">BACKGROUND REMOVAL</p>
+                        <p class="bodyContentTextTitel">IMAGE MANUPULATION</p>
                         <div class="main-div">
                             <div class="sub-div">
                                 <div class="top-div">
@@ -684,7 +765,7 @@
                                 </div>
                                 <div class="year-div">
                                     <p class="bodyContentTextBody">
-                                        Background removal or clipping path service is one of the popular services in the e-commerce and photography industries. It allows you to isolate an object from its background for further editing. Clipping paths or Background removal are often used in Photoshop to remove the background from an image.
+                                        Image manipulation is a relatively useful service to remove unwanted objects or parts of an image. This can be done for a number of reasons, such as improving the quality of the image, changing the subject of the image or creating a new image entirely. Image manipulation is a popular technique in Photoshop and other editing software.
                                     </p>
                                 </div>
                             </div>
@@ -693,10 +774,53 @@
 
                 </div>
             </div>
-
-
-
         </section>
+        <div class="trial text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="trial-text">
+                        <p>Need help with bulk image editing?</p>
+                        <h5>Request a free consultation and price estimate</h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="trial-btn">
+                        <a href="#" class="animate__animated animate__heartBeat" id="trialButton">Request Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer text-center">
+            <h5>APEX EDITORS</h5>
+            <p>eyaminurrahman@gmail.com</p>
+            <div class="social-media">
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+                          </svg>
+                    </li>
+                    <li><a href="https://instagram.com/apexeditors.bd?igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+                            </svg></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=01910686623"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                            </svg></a></li>
+                    <li><a href="skype:Eyaminur Rahman?chat"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z" />
+                            </svg></a></li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+                          </svg>
+                    </li>        
+                </ul>
+            </div>
+        </div>
 
     </div>
     <!--Sidebar-->
@@ -711,7 +835,7 @@
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
                         </svg></a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=01911456794"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                <li><a href="https://api.whatsapp.com/send?phone=01910686623"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
                         </svg></a></li>
@@ -722,7 +846,28 @@
             </ul>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const trialButton = $("#trialButton");
 
+            // Function to continuously apply the animation
+            function animateButton() {
+                trialButton.toggleClass("animate__animated animate__heartBeat");
+                trialButton.fadeToggle(2000); // Adjust the timing based on the animation duration
+            }
+
+            // Initial visibility toggle (e.g., after 1 second)
+            setTimeout(function () {
+                trialButton.css("display", "block");
+                animateButton();
+            }, 2000); // 1000 milliseconds = 1 second
+
+            // Continuously apply the animation (every 3 seconds)
+            setInterval(animateButton, 2000);
+        });
+    </script>
+      
 </body>
 
 </html>
